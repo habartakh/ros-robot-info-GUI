@@ -122,8 +122,10 @@ include_directories(
 
 ## Declare a C++ library
 add_library(${PROJECT_NAME}
+  src/hydraulic_system_monitor.cpp
   src/robot_info_class.cpp
   src/agv_robot_info_class.cpp
+  
 )
 
 ## Add cmake target dependencies of the library
@@ -155,7 +157,7 @@ add_executable(${PROJECT_NAME}_node src/robot_info_main.cpp src/robot_info_class
 target_link_libraries(${PROJECT_NAME}_node ${catkin_LIBRARIES} ${PROJECT_NAME})
 
 
-add_executable(agv_robot_info_node src/agv_robot_info_main.cpp src/agv_robot_info_class.cpp )
+add_executable(agv_robot_info_node src/hydraulic_system_monitor.cpp src/agv_robot_info_main.cpp src/agv_robot_info_class.cpp )
 target_link_libraries(agv_robot_info_node ${catkin_LIBRARIES} ${PROJECT_NAME})
 
 

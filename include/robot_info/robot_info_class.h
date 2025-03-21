@@ -9,6 +9,7 @@
 class RobotInfo {
 public:
   RobotInfo();
+  RobotInfo(ros::NodeHandle *);
   RobotInfo(ros::NodeHandle *, std::string, std::string, std::string,
             std::string);
   virtual void publish_data();
